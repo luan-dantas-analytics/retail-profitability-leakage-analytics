@@ -1,0 +1,5 @@
+source,reason,rows
+sales,duplicate_sale_id,134
+sales,missing_plan_type,77
+sales,unknown_product_or_plan,63
+sales,non_positive_value,36

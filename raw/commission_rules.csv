@@ -1,0 +1,10 @@
+product_code,plan_type,commission_rate
+MOBILE,Basic,0.14
+MOBILE,Plus,0.15
+MOBILE,Premium,0.16
+BROADBAND,Basic,0.16
+BROADBAND,Plus,0.17
+BROADBAND,Premium,0.18
+TV,Basic,0.12
+TV,Plus,0.13
+DEVICE,Standard,0.04

@@ -1,0 +1,28 @@
+// Power BI model: import exports/*.csv (or connect to the SQL warehouse views).
+// Relationships: DimStore[store_id] 1—* StoreMonthMargin[store_id]; DimStore 1—* LeakageByStoreMonth[store_id]; DimDate[YearMonth] 1—* both facts.
+// NOTE: .pbix not included; these measures are written to paste into a model built on the exported views.
+
+Revenue = SUM ( StoreMonthMargin[revenue] )
+Operating Cost = SUM ( StoreMonthMargin[operating_cost] )
+Operating Profit = [Revenue] - [Operating Cost]
+Margin % = DIVIDE ( [Operating Profit], [Revenue] )
+
+Margin Band =
+VAR m = [Margin %]
+RETURN SWITCH ( TRUE (), ISBLANK ( m ), BLANK (), m >= 0.15, "Healthy", m >= 0.05, "Attention", "Critical" )
+
+Expected Commission = SUM ( LeakageByStoreMonth[expected_commission] )
+Leakage = SUM ( LeakageByStoreMonth[underpaid_amount] ) + SUM ( LeakageByStoreMonth[missing_amount] )
+Leakage % = DIVIDE ( [Leakage], [Expected Commission] )
+Overpaid = SUM ( LeakageByStoreMonth[overpaid_amount] )
+Match Coverage % = DIVIDE ( SUM ( LeakageByStoreMonth[lines_ok] ), SUM ( LeakageByStoreMonth[lines] ) )
+
+Margin % Prev Month =
+CALCULATE ( [Margin %], DATEADD ( DimDate[Date], -1, MONTH ) )
+
+Margin Change (pp) = ( [Margin %] - [Margin % Prev Month] ) * 100
+
+Margin % Last 3M =
+CALCULATE ( [Margin %], DATESINPERIOD ( DimDate[Date], MAX ( DimDate[Date] ), -3, MONTH ) )
+
+Recoverable Leakage (est. 70%) = [Leakage] * 0.7   // assumption: share recoverable after dispute; agree with client

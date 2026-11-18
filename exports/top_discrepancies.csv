@@ -1,0 +1,26 @@
+sale_id,store_id,year_month,expected,received,variance,status,store_name
+S04-2025-06-00131,S04,2025-06,200.13,0.0,-200.13,missing_in_statement,Airport Kiosk
+S03-2025-08-00526,S03,2025-08,200.0,0.0,-200.0,missing_in_statement,Central Square
+S03-2025-08-00394,S03,2025-08,199.55,0.0,-199.55,missing_in_statement,Central Square
+S02-2025-11-00183,S02,2025-11,199.1,0.0,-199.1,missing_in_statement,Harbor Mall
+S02-2025-05-00322,S02,2025-05,198.95,0.0,-198.95,missing_in_statement,Harbor Mall
+S02-2025-06-00076,S02,2025-06,0.0,198.87,198.87,not_in_sales_base,Harbor Mall
+S04-2025-04-00280,S04,2025-04,198.68,0.0,-198.68,missing_in_statement,Airport Kiosk
+S04-2025-03-00382,S04,2025-03,198.6,0.0,-198.6,missing_in_statement,Airport Kiosk
+S04-2025-09-00164,S04,2025-09,198.54,0.0,-198.54,missing_in_statement,Airport Kiosk
+S01-2025-10-00484,S01,2025-10,198.24,0.0,-198.24,missing_in_statement,North Plaza
+S04-2025-04-00442,S04,2025-04,198.19,0.0,-198.19,missing_in_statement,Airport Kiosk
+S03-2025-06-00796,S03,2025-06,198.02,0.0,-198.02,missing_in_statement,Central Square
+S01-2025-03-00287,S01,2025-03,197.84,0.0,-197.84,missing_in_statement,North Plaza
+S05-2025-08-00369,S05,2025-08,197.56,0.0,-197.56,missing_in_statement,Riverside
+S03-2025-10-00357,S03,2025-10,197.48,0.0,-197.48,missing_in_statement,Central Square
+S01-2025-11-00470,S01,2025-11,0.0,197.18,197.18,not_in_sales_base,North Plaza
+S03-2025-03-00608,S03,2025-03,197.13,0.0,-197.13,missing_in_statement,Central Square
+S03-2025-12-00270,S03,2025-12,197.03,0.0,-197.03,missing_in_statement,Central Square
+S02-2025-10-00290,S02,2025-10,197.02,0.0,-197.02,missing_in_statement,Harbor Mall
+S02-2025-12-00182,S02,2025-12,0.0,196.94,196.94,not_in_sales_base,Harbor Mall
+S03-2025-02-00311,S03,2025-02,196.62,0.0,-196.62,missing_in_statement,Central Square
+S03-2025-05-00268,S03,2025-05,196.4,0.0,-196.4,missing_in_statement,Central Square
+S05-2025-09-00096,S05,2025-09,0.0,196.11,196.11,not_in_sales_base,Riverside
+S02-2025-12-00476,S02,2025-12,195.56,0.0,-195.56,missing_in_statement,Harbor Mall
+S01-2025-01-00357,S01,2025-01,195.34,0.0,-195.34,missing_in_statement,North Plaza
